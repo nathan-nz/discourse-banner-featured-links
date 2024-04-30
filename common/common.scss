@@ -1,0 +1,95 @@
+@import "functions";
+
+$parsedSettings: parseObjectSettings($links);
+
+.banner-featured-links {
+  &__wrapper {
+    margin: 1rem 0;
+  }
+
+  &__wrapper-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 2rem;
+    margin: 0 0 2em 0;
+
+    @media screen and (max-width: 1000px) {
+      gap: 0.5rem;
+      font-size: var(--font-down-1);
+    }
+
+    @include breakpoint(mobile-extra-large) {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5em;
+    padding: 0.5em 0.65em;
+    flex-shrink: 0;
+
+    text-wrap: nowrap;
+    font-weight: bold;
+
+    color: #{$button_color};
+    background-color: #{$button_background};
+
+    border-radius: #{$button_rounding};
+    box-shadow: inset 0px 0px 0px 2px #{$button_shadow_color};
+
+    &:visited {
+      color: #{$button_color};
+    }
+
+    &:hover {
+      background-color: #{$button_background_hover};
+      color: #{$button_color};
+    }
+
+    @for $index from 1 through length($parsedSettings) {
+      $item: nth($parsedSettings, $index);
+      $identifier: #{map-get($item, "button_identifier")};
+
+      @if $identifier == "" {
+        $identifier: "bfl-link-#{$index - 1}";
+      }
+
+      $borderRadius: #{map-get($item, "button_rounding")};
+      $background: #{map-get($item, "button_background")};
+      $backgroundHover: #{map-get($item, "button_background_hover")};
+      $shadowColor: #{map-get($item, "button_shadow_color")};
+      $color: #{map-get($item, "button_color")};
+
+      &.#{$identifier} {
+        @if $borderRadius != "" {
+          border-radius: $borderRadius;
+        }
+
+        @if $background != "" {
+          background-color: $background;
+        }
+
+        @if $shadowColor != "" {
+          box-shadow: inset 0px 0px 0px 2px $shadowColor;
+        }
+
+        @if $color != "" {
+          color: $color;
+        }
+      }
+
+      @if $backgroundHover != "" {
+        &.#{$identifier}:hover {
+          background-color: $backgroundHover;
+        }
+      }
+    }
+  }
+}

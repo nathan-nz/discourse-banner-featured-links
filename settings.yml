@@ -1,0 +1,102 @@
+links:
+  type: objects
+  default:
+    - emoji: "📣"
+      text: "Announcement"
+      url: "https://meta.discourse.org/c/announcements/67"
+      target: "_blank"
+    - emoji: "📚"
+      text: "Documentation"
+      url: "https://meta.discourse.org/c/documentation/10"
+      target: "_blank"
+    - emoji: "🛠️"
+      text: "Support"
+      url: "https://meta.discourse.org/c/support/6"
+      target: "_blank"
+    - emoji: "🎨"
+      text: "Customize"
+      url: "https://meta.discourse.org/t/beginners-guide-to-developing-discourse-themes/93648"
+      target: "_blank"
+  schema:
+    name: link
+    properties:
+      emoji:
+        type: string
+        required: true
+        validations:
+          min: 1
+          max: 100
+      text:
+        type: string
+        required: true
+      url:
+        type: string
+        required: true
+        validations:
+          min: 1
+          max: 2048
+          url: true
+      target:
+        type: enum
+        default: _blank
+        choices:
+          - _blank
+          - _self
+          - _parent
+          - _top
+      button_rounding:
+        type: string
+        default: ""
+      button_background:
+        type: string
+        default: ""
+      button_background_hover:
+        type: string
+        default: ""
+      button_color:
+        type: string
+        default: ""
+      button_shadow_color:
+        type: string
+        default: ""
+      button_identifier:
+        type: string
+        default: ""
+show_on:
+  default: homepage
+  type: enum
+  choices:
+    - everywhere
+    - homepage
+    - top-menu
+    - latest
+    - categories
+    - top
+plugin_outlet:
+  default: above-main-container
+  type: enum
+  choices:
+    - above-site-header
+    - before-header-panel
+    - below-site-header
+    - after-header
+    - above-main-container
+    - header-list-container-bottom
+    - before-list-area
+    - before-topic-list
+    - topic-above-post-stream
+button_rounding:
+  type: string
+  default: "8px"
+button_background:
+  type: string
+  default: "var(--tertiary)"
+button_background_hover:
+  type: string
+  default: "var(--tertiary-hover)"
+button_color:
+  type: string
+  default: "var(--secondary)"
+button_shadow_color:
+  type: string
+  default: "var(--tertiary-hover)"

@@ -1,0 +1,85 @@
+en:
+  theme_metadata:
+    settings:
+      links:
+        description: |
+          Text links to be displayed in the header.
+          <br><br><br>
+          <h2>Location</h2>
+          You can choose specific pages and various places to display the links on.
+        schema:
+          properties:
+            emoji:
+              label: Emoji
+              description: >
+                The emoji to display for the links.<br>
+                <details><summary>Shortcuts</summary><div>Windows: <kbd>Win</kbd> + <kbd>.</kbd></div><div>Mac: <kbd>Cmd</kbd> + <kbd>Ctrl</kbd> + <kbd>Space</kbd></div></details>
+            text:
+              label: Title
+              description: The title of the link.
+            description:
+              label: Description
+              description: The description of the link.
+            url:
+              label: URL
+              description: The URL to link to.
+            target:
+              label: Target
+              description: >
+                Opens the linked document:<br>
+                <code>_blank</code>: in a new window or tab (this is default)<br> 
+                <code>_self</code>: in the same frame as it was clicked<br>
+                <code>_parent</code>: in the parent frame<br>
+                <code>_top</code>: in the full body of the window
+                <br><br><br>
+                <h2>Button Styling</h2>
+                You can overwrite the default styling here for this link.<br>
+                If the settings are not enough, you can easily add a custom CSS class name (see below) to target the link outside this component.
+            button_rounding:
+              label: Rounding
+              description: The amount of rounding to apply to the button.
+            button_background:
+              label: Background
+              description: The background color of the button.
+            button_background_hover:
+              label: Background Hover
+              description: The background color of the button when hovered.
+            button_color:
+              label: Color
+              description: The text color of the button.
+            button_shadow_color:
+              label: Shadow Color
+              description: The shadow color of the button.
+            button_identifier:
+              label: CSS Classname
+              description: |
+                A custom CSS class to apply to the button.
+                Useful if you want to style the button differently and the settings are not enough.
+                You can target with <code>.banner-featured-links__link.your-classname {}</code>
+      show_on:
+        description: |
+          The pages to display the links on.
+          <code>top_menu</code> refers to the <a href="/admin/site_settings/category/all_results?filter=top_menu">top menu site.
+      plugin_outlet:
+        description: |
+          The location to display the links.
+          <br><br><br>
+          <h2>Global Styling</h2>
+          Customize the default look of the links.<br>
+          You can overwrite these settings for each link individually.
+      button_rounding:
+        label: Button Rounding
+        description: |
+          The amount of rounding to apply to the button.
+      button_background:
+        label: Button Background
+        description: The background color of the button.
+      button_background_hover:
+        label: Button Background Hover
+        description: The background color of the button when hovered.
+      button_color:
+        label: Button Color
+        description: The text color of the button.
+      button_shadow_color:
+        label: Button Shadow Color
+        description: The shadow color of the button.
