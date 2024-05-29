@@ -49,7 +49,9 @@ export default class BannerFeaturedLinks extends Component {
               target="{{link.target}}"
               alt="{{htmlSafe link.text}}"
             >
-              {{replaceEmoji link.emoji}}
+              {{#if link.emoji}}
+                {{replaceEmoji link.emoji}}
+              {{/if}}
               {{htmlSafe link.text}}
             </a>
           {{/each}}
