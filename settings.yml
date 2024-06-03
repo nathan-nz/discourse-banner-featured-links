@@ -73,17 +73,60 @@ show_on:
     - top
 plugin_outlet:
   default: above-main-container
+  type: string
+buttons_wrapper_max_width:
+  type: string
+  default: "100%"
+buttons_wrapper_margin:
+  type: string
+  default: "1rem auto"
+mobile_buttons_wrapper_max_width:
+  type: string
+  default: ""
+mobile_buttons_wrapper_margin:
+  type: string
+  default: ""
+buttons_justify:
   type: enum
+  default: "center"
   choices:
-    - above-site-header
-    - before-header-panel
-    - below-site-header
-    - after-header
-    - above-main-container
-    - header-list-container-bottom
-    - before-list-area
-    - before-topic-list
-    - topic-above-post-stream
+    - center
+    - flex-start
+    - flex-end
+    - space-between
+    - space-around
+    - space-evenly
+buttons_gap:
+  type: string
+  default: "1rem"
+buttons_font_size:
+  type: string
+  default: "var(--base-font-size)"
+mobile_buttons_justify:
+  type: enum
+  default: "center"
+  choices:
+    - center
+    - flex-start
+    - flex-end
+    - space-between
+    - space-around
+    - space-evenly
+mobile_buttons_gap:
+  type: string
+  default: "0.5rem"
+mobile_buttons_direction:
+  type: enum
+  default: "row"
+  choices:
+    - row
+    - column
+mobile_buttons_font_size:
+  type: string
+  default: "var(--font-down-1)"
+button_width:
+  type: string
+  default: "auto"
 button_rounding:
   type: string
   default: "8px"

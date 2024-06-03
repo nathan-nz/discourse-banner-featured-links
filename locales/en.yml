@@ -37,19 +37,19 @@ en:
                 If the settings are not enough, you can easily add a custom CSS class name (see below) to target the link outside this component.
             button_rounding:
               label: Rounding
-              description: The amount of rounding to apply to the button.
+              description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank" title="'border-radius' CSS Documentation">amount of rounding</a> to apply to the button.
             button_background:
               label: Background
-              description: The background color of the button.
+              description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color" target="_blank" title="'background-color' CSS Documentation">background color</a> of the button.
             button_background_hover:
               label: Background Hover
-              description: The background color of the button when hovered.
+              description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color" target="_blank" title="'background-color' CSS Documentation">background color</a> of the button when hovered.
             button_color:
               label: Color
-              description: The text color of the button.
+              description: The text <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank" title="'color' CSS Documentation">color</a> of the button.
             button_shadow_color:
               label: Shadow Color
-              description: The shadow color of the button.
+              description: The shadow <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank" title="'color' CSS Documentation">color</a> of the button.
             button_identifier:
               label: CSS Classname
               description: |
@@ -57,29 +57,92 @@ en:
                 Useful if you want to style the button differently and the settings are not enough.
                 You can target with <code>.banner-featured-links__link.your-classname {}</code>
       show_on:
-        description: |
+        description: >
           The pages to display the links on.
           <code>top_menu</code> refers to the <a href="/admin/site_settings/category/all_results?filter=top_menu">top menu site.
       plugin_outlet:
         description: |
-          The location to display the links.
+          The location to display the links.<br>
+          <details>
+          <summary>Common Locations</summary>
+          <code>above-main-container</code>
+          <code>above-site-header</code>
+          <code>after-header</code>
+          <code>before-header-panel</code>
+          <code>before-list-area</code>
+          <code>before-topic-list</code>
+          <code>below-site-header</code>
+          <code>header-list-container-bottom</code>
+          <code>topic-above-post-stream</code><br>
+
+          Search Banner component:<br>
+          <code>search-banner-below-headline</code>
+          <code>search-banner-below-input</code>
+          </details>
           <br><br><br>
           <h2>Global Styling</h2>
-          Customize the default look of the links.<br>
-          You can overwrite these settings for each link individually.
+          Customize the default spacing and look of the links.<br>
+          You can overwrite the button styling for each link individually.<br><br>
+          <h4>Buttons Wrapper Styling</h4>
+          Customize the container of the links.<br><br>
+      buttons_wrapper_max_width:
+        label: Max Width
+        description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width" target="_blank" title="'max-width' CSS Documentation">maximum width</a> of the buttons wrapper.
+      buttons_wrapper_margin:
+        label: Margin
+        description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin" target="_blank" title="'background-color' CSS Documentation">margin</a> of the buttons wrapper.<br><br>
+      mobile_buttons_wrapper_max_width:
+        label: (Mobile) Max Width
+        description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width" target="_blank" title="'max-width' CSS Documentation">maximum width</a> of the buttons wrapper on mobile.
+      mobile_buttons_wrapper_margin:
+        label: (Mobile) Margin
+        description: |
+          The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin" target="_blank" title="'background-color' CSS Documentation">margin</a> of the buttons wrapper on mobile.
+          <br><br><br>
+          <h4>Buttons Spacing & Text Font Size</h4>
+          Customize the spacing of the buttons and the font size of the text.
+      buttons_justify:
+        label: Justify
+        description: |
+          How to distribute <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content" target="_blank" title="'justify-content' CSS Documentation">space</a> between and around links.<br>
+      buttons_gap:
+        label: Gap
+        description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gap" target="_blank" title="'gap' CSS Documentation">gap</a> between the buttons.
+      buttons_font_size:
+        label: Font Size
+        description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" target="_blank" title="'font-size' CSS Documentation">size</a> of the font of the buttons.<br><br>
+      mobile_buttons_gap:
+        label: (Mobile) Gap
+        description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gap" target="_blank" title="'gap' CSS Documentation">gap</a> between the buttons on mobile.
+      mobile_buttons_justify:
+        label: (Mobile) Justify
+        description: How to distribute <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content" target="_blank" title="'justify-content' CSS Documentation">space</a> between and around links on mobile.
+      mobile_buttons_direction:
+        label: (Mobile) Direction
+        description: |
+          The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction" target="_blank" title="'flex-direction' CSS Documentation">direction</a> of the buttons on mobile.
+      mobile_buttons_font_size:
+        label: (Mobile) Font Size
+        description: |
+          The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" target="_blank" title="'font-size' CSS Documentation">size</a> of the font of the buttons on mobile.
+          <br><br><br>
+          <h4>Button Styling</h4>
+          Customize the default look of the buttons.
+      button_width:
+        label: Button Width
+        description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" target="_blank" title="'width' CSS Documentation">width</a> of the button.<br>
       button_rounding:
         label: Button Rounding
-        description: |
-          The amount of rounding to apply to the button.
+        description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank" title="'border-radius' CSS Documentation">amount of rounding</a> to apply to the button.
       button_background:
         label: Button Background
-        description: The background color of the button.
+        description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color" target="_blank" title="'background-color' CSS Documentation">background color</a> of the button.
       button_background_hover:
         label: Button Background Hover
-        description: The background color of the button when hovered.
+        description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color" target="_blank" title="'background-color' CSS Documentation">background color</a> of the button when hovered.
       button_color:
         label: Button Color
-        description: The text color of the button.
+        description: The text <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank" title="'color' CSS Documentation">color</a> of the button.
       button_shadow_color:
         label: Button Shadow Color
-        description: The shadow color of the button.
+        description: The shadow <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank" title="'color' CSS Documentation">color</a> of the button.

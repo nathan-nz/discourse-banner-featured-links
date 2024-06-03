@@ -4,26 +4,33 @@ $parsedSettings: parseObjectSettings($links);
 
 .banner-featured-links {
   &__wrapper {
-    margin: 1rem 0;
+    margin: #{$buttons_wrapper_margin};
+    max-width: #{$buttons_wrapper_max_width};
+
+    @include breakpoint(mobile-extra-large) {
+      @if $mobile_buttons_wrapper_max_width != "" {
+        margin: #{$mobile_buttons_wrapper_margin};
+      }
+
+      @if $mobile_buttons_wrapper_max_width != "" {
+        max-width: #{$mobile_buttons_wrapper_max_width};
+      }
+    }
   }
 
   &__wrapper-links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-
-    gap: 2rem;
-    margin: 0 0 2em 0;
-
-    @media screen and (max-width: 1000px) {
-      gap: 0.5rem;
-      font-size: var(--font-down-1);
-    }
+    justify-content: #{$buttons_justify};
+    gap: #{$buttons_gap};
+    font-size: #{$buttons_font_size};
 
     @include breakpoint(mobile-extra-large) {
-      flex-direction: column;
-      row-gap: 1rem;
+      flex-direction: #{$mobile_buttons_direction};
+      justify-content: #{$mobile_buttons_justify};
+      gap: #{$mobile_buttons_gap};
+      font-size: #{$mobile_buttons_font_size};
     }
   }
 
@@ -34,6 +41,7 @@ $parsedSettings: parseObjectSettings($links);
     column-gap: 0.5em;
     padding: 0.5em 0.65em;
     flex-shrink: 0;
+    width: #{$button_width};
 
     text-wrap: nowrap;
     font-weight: bold;

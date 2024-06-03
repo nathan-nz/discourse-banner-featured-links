@@ -36,8 +36,8 @@ export default class BannerFeaturedLinks extends Component {
 
   <template>
     {{#if this.showOnRoute}}
-      <div class="banner-featured-links__wrapper {{settings.plugin_outlet}}">
-        <div class="banner-featured-links__wrapper-links">
+      <aside class="banner-featured-links__wrapper {{settings.plugin_outlet}}">
+        <nav class="banner-featured-links__wrapper-links">
           {{#each this.featuredLinks as |link index|}}
             <a
               class={{concatClass
@@ -55,8 +55,8 @@ export default class BannerFeaturedLinks extends Component {
               {{htmlSafe link.text}}
             </a>
           {{/each}}
-        </div>
-      </div>
+        </nav>
+      </aside>
     {{/if}}
   </template>
 }
