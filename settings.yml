@@ -19,6 +19,7 @@ links:
       target: "_blank"
   schema:
     name: link
+    identifier: text
     properties:
       emoji:
         type: string
