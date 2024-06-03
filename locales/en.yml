@@ -35,6 +35,9 @@ en:
                 <h2>Button Styling</h2>
                 You can overwrite the default styling here for this link.<br>
                 If the settings are not enough, you can easily add a custom CSS class name (see below) to target the link outside this component.
+            button_width:
+              label: Width
+              description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" target="_blank" title="'width' CSS Documentation">width</a> of the button.
             button_rounding:
               label: Rounding
               description: The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank" title="'border-radius' CSS Documentation">amount of rounding</a> to apply to the button.

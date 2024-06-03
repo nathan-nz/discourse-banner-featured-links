@@ -44,6 +44,9 @@ links:
           - _self
           - _parent
           - _top
+      button_width:
+        type: string
+        default: ""
       button_rounding:
         type: string
         default: ""

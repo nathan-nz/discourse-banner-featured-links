@@ -40,8 +40,7 @@ $parsedSettings: parseObjectSettings($links);
     align-items: center;
     column-gap: 0.5em;
     padding: 0.5em 0.65em;
-    flex-shrink: 0;
-    width: #{$button_width};
+    flex: 0 0 #{$button_width};
 
     text-wrap: nowrap;
     font-weight: bold;
@@ -69,6 +68,7 @@ $parsedSettings: parseObjectSettings($links);
         $identifier: "bfl-link-#{$index - 1}";
       }
 
+      $width: #{map-get($item, "button_width")};
       $borderRadius: #{map-get($item, "button_rounding")};
       $background: #{map-get($item, "button_background")};
       $backgroundHover: #{map-get($item, "button_background_hover")};
@@ -76,6 +76,10 @@ $parsedSettings: parseObjectSettings($links);
       $color: #{map-get($item, "button_color")};
 
       &.#{$identifier} {
+        @if $width != "" {
+          flex-basis: #{$width};
+        }
+
         @if $borderRadius != "" {
           border-radius: $borderRadius;
         }
