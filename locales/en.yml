@@ -13,7 +13,7 @@ en:
               label: Emoji
               description: >
                 The emoji to display for the links.<br>
-                <details><summary>Shortcuts</summary><div>Windows: <kbd>Win</kbd> + <kbd>.</kbd></div><div>Mac: <kbd>Cmd</kbd> + <kbd>Ctrl</kbd> + <kbd>Space</kbd></div></details>
+                <details><summary>Shortcuts</summary><div>Windows: <kbd>Win</kbd> + <kbd>.</kbd></div><div>Mac: <kbd>Cmd</kbd> + <kbd>Ctrl</kbd> + <kbd>Space</kbd></div><div>ChromeOS: <kbd>Launch</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd></div></details>
             text:
               label: Title
               description: The title of the link.
